@@ -1,0 +1,855 @@
+
+/* =========================================
+   TRANQUIL MINDS INITIATIVE
+   Main Website Stylesheet
+   Applies to all five HTML pages
+========================================= */
+
+
+/* =========================================
+   1. GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #344b4a;
+    background-color: #f7faf9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #164e4a;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   2. REUSABLE LAYOUT
+========================================= */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 90%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.section-padding {
+    padding: 70px 0;
+}
+
+
+/* =========================================
+   3. WEBSITE HEADER
+========================================= */
+
+.site-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 18px 0;
+    border-bottom: 1px solid #e2eeeb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #176b63;
+    letter-spacing: 0.3px;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #344b4a;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #159486;
+}
+
+
+/* =========================================
+   4. GENERAL BUTTON STYLES
+========================================= */
+
+.btn {
+    display: inline-block;
+    padding: 13px 26px;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #16877d;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #10675f;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #d9f0e9;
+    color: #176b63;
+}
+
+.btn-secondary:hover {
+    background-color: #c4e6dc;
+}
+
+
+/* =========================================
+   5. HOMEPAGE HERO SECTION
+========================================= */
+
+.hero {
+    min-height: 480px;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #dff4ed,
+        #edf8f5,
+        #d9eeee
+    );
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    max-width: 750px;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 650px;
+    font-size: 18px;
+    color: #526b68;
+    margin-bottom: 28px;
+}
+
+
+/* =========================================
+   6. INTRODUCTION SECTION
+========================================= */
+
+.intro-section {
+    padding: 75px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.intro-section h2 {
+    margin-bottom: 20px;
+}
+
+.intro-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+
+/* =========================================
+   7. SMALL SECTION LABELS
+========================================= */
+
+.eyebrow {
+    color: #16877d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================
+   8. INNER PAGE BANNERS
+========================================= */
+
+.page-banner {
+    padding: 75px 20px;
+    background: linear-gradient(
+        135deg,
+        #e2f4ed,
+        #eff8f6
+    );
+    text-align: center;
+}
+
+.page-banner h1 {
+    margin-bottom: 18px;
+}
+
+.page-banner p {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #526b68;
+}
+
+
+/* =========================================
+   9. GENERAL CONTENT SECTIONS
+========================================= */
+
+.content-section {
+    padding: 65px 0;
+    background-color: #ffffff;
+}
+
+.content-section:nth-of-type(even) {
+    background-color: #f7faf9;
+}
+
+.content-section h2 {
+    margin-bottom: 20px;
+}
+
+.content-section > .content-container > p {
+    max-width: 850px;
+}
+
+
+/* =========================================
+   10. SERVICE AND INFORMATION CARDS
+========================================= */
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.service-card {
+    background-color: #ffffff;
+    padding: 28px;
+    border: 1px solid #e0eeea;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(20, 80, 70, 0.06);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(20, 80, 70, 0.12);
+}
+
+.service-card h3 {
+    color: #176b63;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #5a6c69;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   11. CALL TO ACTION SECTION
+========================================= */
+
+.cta-section {
+    padding: 75px 20px;
+    text-align: center;
+    background-color: #dff2eb;
+}
+
+.cta-section h2 {
+    margin-bottom: 18px;
+}
+
+.cta-section p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+
+/* =========================================
+   12. FORMS
+========================================= */
+
+.form-section {
+    padding: 70px 20px;
+    background-color: #f0f7f5;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(20, 80, 70, 0.07);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-container > p {
+    text-align: center;
+    color: #647875;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #254c48;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #cbdcd7;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #344b4a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #16877d;
+    box-shadow: 0 0 0 3px rgba(22, 135, 125, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.form-container button {
+    width: 100%;
+}
+
+
+/* =========================================
+   13. CONTACT PAGE
+========================================= */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.contact-card {
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #e0eeea;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(20, 80, 70, 0.06);
+}
+
+.contact-card h3 {
+    color: #176b63;
+}
+
+.contact-card p {
+    margin-bottom: 10px;
+}
+
+.contact-card a {
+    color: #16877d;
+    font-weight: bold;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   14. WEBSITE FOOTER
+========================================= */
+
+.site-footer {
+    padding: 35px 20px;
+    background-color: #164e4a;
+    color: #ffffff;
+    text-align: center;
+}
+
+.site-footer p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.site-footer p:last-child {
+    color: #c9e6df;
+}
+
+
+/* =========================================
+   15. GENERAL LINKS AND INTERACTIONS
+========================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #e3a94b;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   16. TABLET RESPONSIVENESS
+========================================= */
+
+@media screen and (max-width: 900px) {
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .main-nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}
+
+
+/* =========================================
+   17. MOBILE RESPONSIVENESS
+========================================= */
+
+@media screen and (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 19px;
+    }
+
+    .container,
+    .content-container {
+        width: 92%;
+    }
+
+    .site-header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 19px;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        gap: 10px 15px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 70px 15px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .page-banner {
+        padding: 55px 15px;
+    }
+
+    .section-padding,
+    .content-section,
+    .intro-section {
+        padding: 50px 0;
+    }
+
+    .service-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 23px;
+    }
+
+    .form-section {
+        padding: 45px 12px;
+    }
+
+    .form-container {
+        padding: 25px 18px;
+    }
+
+    .cta-section {
+        padding: 55px 15px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+    }
+
+    .site-footer {
+        padding: 30px 15px;
+    }
+
+}
+
+
+/* =========================================
+   END OF STYLESHEET
+========================================= */
+
+/* Mental Health Image Collection */
+
+.image-gallery {
+    background-color: #f0f8f6;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.image-gallery h2 {
+    color: #285b54;
+    margin-bottom: 15px;
+}
+
+.gallery-description {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.gallery-image img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-caption {
+    margin-top: 20px;
+    color: #39776c;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* About Page Images */
+
+.about-image-section {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #f0f8f6;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+@media (max-width: 600px) {
+    .about-image {
+        height: 230px;
+    }
+}
+
+/* SERVICES PAGE IMAGES */
+
+.services-image-section {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: #f0f8f6;
+}
+
+.services-image {
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.services-image-section h2 {
+    color: #285b54;
+    margin-bottom: 12px;
+}
+
+.services-image-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .services-image {
+        height: 230px;
+    }
+}
+
+/* ENQUIRY PAGE IMAGE */
+
+.enquiry-image-section {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: #f0f8f6;
+}
+
+.enquiry-image {
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.enquiry-image-section h2 {
+    color: #285b54;
+    margin-bottom: 12px;
+}
+
+.enquiry-image-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.form-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .enquiry-image {
+        height: 230px;
+    }
+}
+
+/* CONTACT PAGE IMAGE */
+
+.contact-image-section {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: #f0f8f6;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.contact-image-section h2 {
+    color: #285b54;
+    margin-bottom: 12px;
+}
+
+.contact-image-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.location-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .contact-image {
+        height: 230px;
+    }
+}
+
+
+/* CONTACT PAGE IMAGE */
+
+.contact-image-section {
+    padding: 45px 20px;
+    text-align: center;
+    background-color: #f0f8f6;
+}
+
+.contact-image {
+    width: 100%;
+    max-width: 750px;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.contact-image-section h2 {
+    color: #285b54;
+    margin-bottom: 12px;
+}
+
+.contact-image-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.location-note {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .contact-image {
+        height: 230px;
+    }
+}
